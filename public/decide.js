@@ -13,10 +13,13 @@ formFirst.addEventListener('submit', async function (event) {
     body: JSON.stringify({ width: input1.value, height: input2.value }),
   })
   let json = await response.json();
+  let divImg = document.getElementById('img');
+  let img = document.createElement('img');
+  let.id
+  img.src = json.img_src;
+  divImg.append(img);
+
 })
-
-//ДАЛЬШЕ РАБОТАЕТ КОЛЯ  : {KOLYA RUN }
-
 
 const formFirst2 = document.getElementById('formPaint2');
 formFirst2.addEventListener('submit', async function (event) {
@@ -29,7 +32,12 @@ formFirst2.addEventListener('submit', async function (event) {
     body: JSON.stringify({ width: event.target.width.value, height: event.target.height.value })
   })
   let list = await response.json();
-  console.log(list);
+  let divImg = document.getElementById('img');
+  let img = document.createElement('img');
+  img.src = list.img_src
+
+  divImg.innerHTML = ''
+  divImg.appendChild(img);
 
 
   const div = document.getElementById('divGrow');
