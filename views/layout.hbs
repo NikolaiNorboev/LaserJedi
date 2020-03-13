@@ -1,36 +1,57 @@
 <!DOCTYPE html>
 <html>
-  <head>
-      <link rel="stylesheet" href="/stylesheets/normalize.css">
-      <link rel="stylesheet" href="/stylesheets/application.css">
 
-      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-       <script defer src="decide.js"></script>
+<head>
+  {{!-- <link rel="stylesheet" href="/stylesheets/normalize.css">
+      <link rel="stylesheet" href="/stylesheets/application.css"> --}}
+  <link href="https://fonts.googleapis.com/css?family=Aldrich&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script defer src="decide.js"></script>
 
-      <title>Laser Jedi</title>
-  </head>
-  <body>
-      <header role="banner" class="mar-t-5 pad-t-2 pad-b-4 pad-s-1 wrap-float bg-white">
-          <div class="max-w-700 center wrap-float">
-              <nav class="clearfix mar-b-1">
-                  <ul class="no-bullets no-margin no-padding right">
-                      <li class="pipe-separate t-light-green left"><a href="/">home</a></li>
-                      {{!-- <li class="pipe-separate t-light-green left"><a href="/register">sign up</a></li> --}}
-                      {{!-- <li class="pipe-separate t-light-green left"><a href="/login">log in</a></li> --}}
-                      <li class="pipe-separate t-light-green left"><a href="/decide">decide</a></li>
-                  </ul>
-              </nav>
+  <title>Laser Jedi</title>
+</head>
 
-              <div class="logo-container">
-                  <img class="logo" id="logo" src="/images/images.png" class="center block">
-                  {{!-- <h1>laserjedi.com</h1> --}}
-              </div>
-          </div>
-      </header>
-      <div class="bg-dk-green pad-t-2 pad-s-1 pad-b-8 mar-b-16 c-white">
-          <div class="max-w-700 center">
-            {{{body}}}
-          </div>
-      </div>
-  </body>
+<body>
+  <header class="header">
+
+    <!--     header-left -->
+    <div class="header__left">
+      <img src="/img/Yoda.png" border="0">
+      <p>May the <br>laser force <br>be with you</p>
+    </div>
+
+    <!--    header-center -->
+    <div class="header__center">
+      <h1 class="header__center__logo"> LaserJedi </h1>
+      <h2 class="header__center__sublogo"> Online Laser Cutting Calculator </h2>
+    </div>
+    <div class="header__rightcenter">
+      <a href="/decide">Packer</a>
+    </div>
+
+    <!--     header-right -->
+
+    <div class="header__right">
+      <img src="https://i111.fastpic.ru/big/2020/0116/6a/8fd74611b20fc086d70876b3e82b7f6a.png">
+      <p><a href="mailto:master@laserjedi.com">&nbsp master@laserjedi.com</a></p>
+    </div>
+
+  </header>
+  <div class="bg-dk-green pad-t-2 pad-s-1 pad-b-8 mar-b-16 c-white">
+    <div class="max-w-700 center">
+      {{{body}}}
+    </div>
+  </div>
+  <footer class="footer">
+    <img src="https://i111.fastpic.ru/big/2020/0116/6a/8fd74611b20fc086d70876b3e82b7f6a.png">
+    <p><a href="mailto:master@laserjedi.com">&nbsp master@laserjedi.com</a></p>
+
+  </footer>
+</body>
+
 </html>

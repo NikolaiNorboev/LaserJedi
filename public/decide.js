@@ -2,6 +2,7 @@ const formFirst = document.getElementById('formPaint1');
 const div = document.getElementById("test");
 const input1 = document.getElementById('input1');
 const input2 = document.getElementById('input2');
+let divImg = document.getElementById('img');
 
 formFirst.addEventListener('submit', async function (event) {
   event.preventDefault();
@@ -13,9 +14,8 @@ formFirst.addEventListener('submit', async function (event) {
     body: JSON.stringify({ width: input1.value, height: input2.value }),
   })
   let json = await response.json();
-  let divImg = document.getElementById('img');
   let img = document.createElement('img');
-  let.id
+  img.id = 'imgid';
   img.src = json.img_src;
   divImg.append(img);
 
@@ -32,11 +32,10 @@ formFirst2.addEventListener('submit', async function (event) {
     body: JSON.stringify({ width: event.target.width.value, height: event.target.height.value })
   })
   let list = await response.json();
-  let divImg = document.getElementById('img');
   let img = document.createElement('img');
   img.src = list.img_src
 
-  divImg.innerHTML = ''
+  divImg.innerHTML = ' ';
   divImg.appendChild(img);
 
 
