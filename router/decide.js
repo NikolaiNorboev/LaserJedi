@@ -33,7 +33,6 @@ router.post('/decide2', function (req, res) {
     console.log(bin.boxes[index]);    
     ctx.fillStyle = color[index % 7];
     ctx.fillRect(bin.boxes[index].x, bin.boxes[index].y, bin.boxes[index].width, bin.boxes[index].height);
-    fillSqr += bin.boxes[index].width * bin.boxes[index].height;
   }
 
   res.json({ parametr: parametr, img_src: canvas.toDataURL('image/jpeg', 0.1) })
