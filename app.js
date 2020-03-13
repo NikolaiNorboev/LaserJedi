@@ -17,4 +17,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use("/" , indexRouter);
 app.use('/' , decideRouter);
 
-app.listen(3000, () => console.log('PORT 3000'));
+
+const port = process.env.PORT || 3000
+
+app.listen(port, () => console.log('PORT '+port));
